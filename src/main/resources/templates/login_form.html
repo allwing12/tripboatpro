@@ -44,14 +44,14 @@
     <form th:action="@{/login}" method ="post">
         <div class="form-outline mb-4" style="text-align:center;">
             <label for="username"></label>
-            <input type="text" name="username" id="username" placeholder="아이디를 입력 하세요" style="width:327px; height: 58px; border-radius:5px; border:1px solid gray; padding: 10px;">
+            <input type="text" name="username" id="username" placeholder="아이디를 입력 하세요" style="width:327px; height: 58px; border-radius:5px; border:1px solid gray; padding: 10px; font-family: 'Do Hyeon', sans-serif;">
         </div>
         <div class="form-outline mb-4" style="text-align: center;">
             <label for="password"></label>
-            <input type="password" name="password" id="password" placeholder="비밀번호를 입력 하세요" style="width:327px; height: 58px; border-radius:5px; border:1px solid gray; padding: 10px;">
+            <input type="password" name="password" id="password" placeholder="비밀번호를 입력 하세요" style="width:327px; height: 58px; border-radius:5px; border:1px solid gray; padding: 10px; font-family: 'Do Hyeon', sans-serif;">
         </div>
         <div th:if="${param.error}">
-            <div class="alert alert-danger" style="width:327px; height: 58px; border-radius:5px; font-weight:bold; font-size:20px; font-family: 'Do Hyeon', sans-serif; margin-left:auto; margin-right:auto;">
+            <div class="alert alert-danger" style="width:327px; height: 58px; border-radius:5px; font-size:20px; font-family: 'Do Hyeon', sans-serif; margin-left:auto; margin-right:auto; font-family: 'Do Hyeon', sans-serif;">
                 아이디 또는 비밀번호를 확인해주세요.
             </div>
         </div>

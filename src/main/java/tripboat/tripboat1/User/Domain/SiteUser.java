@@ -1,4 +1,4 @@
-package tripboat.tripboat1.User.Services.Domain;
+package tripboat.tripboat1.User.Domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -20,4 +20,7 @@ public class SiteUser {
 
     @Column(unique = true)
     private String Email;
+
+    @Column(unique = true)
+    private String nickname;
 }
