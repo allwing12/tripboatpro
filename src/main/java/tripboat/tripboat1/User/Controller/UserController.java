@@ -63,14 +63,14 @@ public class UserController {
         str+="</script>";
         return str;
     }
-    @ResponseBody
-    @RequestMapping("/Sign")
-    public String Sign(HttpSession session) {
-        session.invalidate();
-        String str = "<script>";
-        str+="alert('회원가입이 완료 되었습니다.');";
-        str+="window.location.href = '/login';";
-        str+="</script>";
-        return str;
-    }
+//    @ResponseBody
+//    @RequestMapping("/Sign")
+//    public String Sign(HttpSession session) {
+//        session.invalidate();
+//        String str = "<script>";
+//        str+="alert('회원가입이 완료 되었습니다.');";
+//        str+="window.location.href = '/login';";
+//        str+="</script>";
+//        return str;
+//    }
 }

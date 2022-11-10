@@ -48,13 +48,14 @@
                             <a class="nav-link" th:href="@{/signup}" style="font-family: 'Do Hyeon', sans-serif; font-weight:bold; font-size:18px; position:absolute; margin-left:40px;" >회원가입</a>
                         </div>
                         <div style="width:100px; height:40px; position:absolute; margin-left:485px; background-color:#00ce7c; border-radius:10px; text-align:center;">
-                            <a class="nav-link" th:href="@{/signup}" style="width:100px; height:40px; color:white; font-family: 'Do Hyeon', sans-serif; font-size:20px; font-weight:bold; padding-top:10px; padding-left:27px;">글쓰기</a>
+                            <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/login_errors}" style="width:100px; height:40px; color:white; font-family: 'Do Hyeon', sans-serif; font-size:20px; font-weight:bold; padding-top:10px; padding-left:27px;">글쓰기</a>
+                            <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/writer}" style="width:100px; height:40px; color:white; font-family: 'Do Hyeon', sans-serif; font-size:20px; font-weight:bold; padding-top:10px; padding-left:27px;">글쓰기</a>
                         </div>
                     </nav>
                     <nav id="navbar2" class="navbar">
                         <div style="width:1200px; height:66px; margin-top:75px; z-index:1; margin-left:-1250px;">
                             <a class="nav-link" th:href="@{/main}" style="font-size:20px; font-weight:bold; margin-top:5px; margin-left:-20px; font-family: 'Do Hyeon', sans-serif;">홈</a>
-                            <a class="nav-link" th:href="@{/main}" style="font-size:20px; font-weight:bold; margin-left:18px; margin-top:-50px; font-family: 'Do Hyeon', sans-serif;">커뮤니티</a>
+                            <a class="nav-link" th:href="@{/comunity}" style="font-size:20px; font-weight:bold; margin-left:18px; margin-top:-50px; font-family: 'Do Hyeon', sans-serif;">커뮤니티</a>
                             <a href="nav-link" style="font-family: 'Do Hyeon', sans-serif; font-weight:bold; font-size:20px; margin-left:100px; margin-top:-50px;">Q&A</a>
                         </div>
                     </nav>
