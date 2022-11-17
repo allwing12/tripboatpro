@@ -1,0 +1,14 @@
+<html layout:decorate="~{layout}">
+
+<body>
+<div layout:fragment="content">
+    <div style="display:flex; justify-content:center;">
+        <div style="height:400px; width:500px; border:solid 3px black; margin-top:20%">
+            <h1 th:text="${comunity.subject}"></h1>
+            <h3 th:text="${comunity.content}"></h3>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
