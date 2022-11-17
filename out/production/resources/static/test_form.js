@@ -14,7 +14,7 @@ if (id4Length(userName.value)) {// 함수의 값과 일치하면
    failMsg.classList.add('hide')// failMsg 클래스 hide 추가
 }else {
    sucMsg.classList.add('hide')// sucMsg 클래스 hide 추가
-   failMsg.classList.remove('hide')// failMsg 클래스 hide 제거
+   failMsg.classList.remove('hide')// failMsg 클래스 hide 제거g
 }
 
 
