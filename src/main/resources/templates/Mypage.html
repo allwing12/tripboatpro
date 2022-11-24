@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
 <head>
     <meta charset="utf-8">
-    <!--  <meta content="width=device-width, initial-scale=1.0" name="viewport">-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <title>ZenBlog Bootstrap Template - Index</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -29,33 +32,19 @@
     <!-- Template Main CSS Files -->
     <link href="/bootstrap/css/variables.css" rel="stylesheet">
     <link href="/bootstrap/css/main.css" rel="stylesheet">
-
-
-    <!-- Vendor JS Files -->
-    <script src="/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/bootstrap/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="/bootstrap/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="/bootstrap/vendor/aos/aos.js"></script>
-    <script src="/bootstrap/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="/bootstrap/js/main.js"></script>
-</head>
-
-
-
-<body>
-<div th:replace="NavBar :: NavBarFragment"></div>
-
-<th:block layout:fragment="content">
-
-
-
-</th:block>
-<footer style="margin-top:10%;">
-    <div th:replace="footer :: footerfragment"></div>
-</footer>
-
+    <link href="/test_form.css" rel="stylesheet">
+    <div th:replace="secondnavbar :: secondnavbarfragment"></div>
+    <body>
+<div style="width:100%; height:100%; background-color: #fafafa">
+    <div style="border:1px solid #e9e9e9; width: 200px; height:500px; margin-left: 200px; margin-bottom: 50px; margin-top:150px; background-color:white;">
+        <div th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</div>
+        <div style="height:40px; margin:auto auto; width:150px; margin-top:20px; margin-bottom: 20px; border:1px solid #e9e9e9; border-radius:5px; background-color:#fafafa;">
+            <a th:href="@{/}" style="margin-left:43px; margin-top:8px; position:absolute; ">계정관리</a>
+        </div>
+        <div style="border: 1px solid #e9e9e9; width:150px; height:40px; margin:auto auto; border-radius:5px; background-color:#fafafa;">
+            <a th:href="@{/}" style="margin-left:43px; margin-top:8px; position:absolute;">내 글 관리</a>
+        </div>
+    </div>
+</div>
+<div th:replace="footer :: footerfragment"></div>
 </body>
-
-</html>

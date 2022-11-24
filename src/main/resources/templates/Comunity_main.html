@@ -15,7 +15,8 @@
         <form action="">
             <input type="text">
         </form>
-        <a href="#" th:href="@{/writer}" style="width:100px; height:20px;">글쓰기</a>
+        <a href="#" sec:authorize="isAnonymous()" th:href="@{/login_errors}" style="width:100px; height:20px;">글쓰기</a>
+        <a href="#" sec:authorize="isAuthenticated()" th:href="@{/writer}" style="width:100px; height:20px;">글쓰기</a>
     </div>
 
     <!--    게시물-->

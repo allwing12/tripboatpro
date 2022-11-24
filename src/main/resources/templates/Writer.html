@@ -1,13 +1,16 @@
 <html layout:decorate="~{layout}">
 <html lang="en">
+<head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+</head>
 
 <div layout:fragment="content">
+
     <body>
     <div>
         <div style="width:500px; margin-left:auto; margin-right:auto; margin-top:20%;">
@@ -26,12 +29,12 @@
                 <form action="img" method="post" enctype="multipart/form-data">
                     <div class="button" style="display:flex; justify-content: center;">
                         <div style="width:80%; height:300px; border:1px solid rgb(219,219,219); display:flex; margin-bottom:-60px; background-color:rgb(240,240,240); border-radius:5px;">
-                            <label for="chooseFile" style="cursor:pointer; font-size:1em; width:100%; height:100%; text-align:center; padding-top:150px; color:rgb(150,150,150) font-family: 'Do Hyeon', sans-serif;">
+                            <intput type="file" class="form-control form-control-sm" name="file" id="file" style="cursor:pointer; font-size:1em; width:100%; height:100%; text-align:center; padding-top:150px; color:rgb(150,150,150) font-family: 'Do Hyeon', sans-serif;">
                                 파일을 업로드 해주세요
-                            </label>
+                            </intput>
                         </div>
                     </div>
-                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)" style="visibility: hidden; justify-content: center;">
+<!--                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)" style="visibility: hidden; justify-content: center;">-->
                 </form>
     <!--텍스트-->
     <div style="margin-top:5%;">
