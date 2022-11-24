@@ -5,7 +5,6 @@ let sucMsg = document.querySelector('.success-message')
 let misMsg = document.querySelector('.mismatch-message')
 const userPw =  document.querySelector('#password1');
 const pwTest = document.querySelector('#password2');
-
 // 2. 아이디 입력창에 키를 눌렀을때 조건문
 userName.onkeyup = function () {
 
@@ -15,9 +14,7 @@ if (id4Length(userName.value)) {// 함수의 값과 일치하면
 }else {
    sucMsg.classList.add('hide')// sucMsg 클래스 hide 추가
    failMsg.classList.remove('hide')// failMsg 클래스 hide 제거g
-}
-
-
+    }
 }
 
 // 3. 함수의 매개변수로 들어오는 값이 4글자 이상인경우 true
@@ -37,6 +34,4 @@ pwTest.onkeyup = function () {
   } else {
     misMsg.classList.remove('hide') // misMag 내용출력
   }
-
-
 }

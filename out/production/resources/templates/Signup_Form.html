@@ -32,15 +32,6 @@
     <link href="/bootstrap/css/variables.css" rel="stylesheet">
     <link href="/bootstrap/css/main.css" rel="stylesheet">
     <link href="/test_form.css" rel="stylesheet">
-
-
-
-    <!-- =======================================================
-    * Template Name: ZenBlog - v1.2.1
-    * Template URL: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
-    * Author: BootstrapMade.com
-    * License: https:///bootstrapmade.com/license/
-    ======================================================== -->
     <div th:replace="secondnavbar :: secondnavbarfragment"></div>
 <body>
 <!--<div layout:fragment="content">-->
@@ -59,8 +50,10 @@
                             <div th:if="${#fields.hasErrors('username')}">
                                 <p th:errors="*{username}" style="color:red; margin-top:63px; position:absolute; font-size:14px; font-weight:300; margin-left:-150px; font-family: 'Do Hyeon', sans-serif;"></p>
                             </div>
+                            <div style="font-size:12px; font-weight:bold; margin-top:63px; position:absolute; margin-left:-170px; color:red;">
+                            <div th:replace="form_errors :: formErrorsFragment"></div>
+                            </div>
                             <div style="margin-top: 63px; position:absolute; margin-left:-155px;">
-                            <div class="success-message hide" style="color:green; font-size:14px; font-weight:300; font-family: 'Do Hyeon', sans-serif; ">사용할 수 있는 아이디입니다</div>
                             <div class="failure-message hide"   style="color:red; font-size:14px; font-weight:300; font-family: 'Do Hyeon', sans-serif;">아이디는 네 글자 이상이어야 합니다</div>
                             </div>
                         </div>

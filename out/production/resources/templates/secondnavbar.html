@@ -45,7 +45,8 @@
                         <div style="width:140px; height:40px; margin-right:10px; position:relative; margin-left:330px;">
                             <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/login}" style="font-family: 'Do Hyeon', sans-serif; font-weight:bold; font-size:18px; position:absolute; margin-left:-30px;">로그인</a>
                             <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}" style="font-family: 'Do Hyeon', sans-serif; font-weight:bold; font-size:18px; position:absolute; margin-left:-30px;">로그아웃</a>
-                            <a class="nav-link" th:href="@{/signup}" style="font-family: 'Do Hyeon', sans-serif; font-weight:bold; font-size:18px; position:absolute; margin-left:40px;" >회원가입</a>
+                            <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/signup}" style="font-family: 'Do Hyeon', sans-serif; font-weight:bold; font-size:18px; position:absolute; margin-left:40px;" >회원가입</a>
+                            <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/mypage}" style="font-family: 'Do Hyeon', sans-serif; font-weight:bold; font-size:18px; position:absolute; margin-left:40px;" >마이페이지</a>
                         </div>
                         <div style="width:100px; height:40px; position:absolute; margin-left:485px; background-color:#00ce7c; border-radius:5px;">
                             <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/login_errors}" style="width:100px; height:40px; color:white; font-family: 'Do Hyeon', sans-serif; font-size:20px; font-weight:bold; padding-top:10px; padding-left:27px;">글쓰기</a>

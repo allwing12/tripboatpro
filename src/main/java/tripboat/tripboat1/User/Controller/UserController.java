@@ -2,20 +2,29 @@ package tripboat.tripboat1.User.Controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import tripboat.tripboat1.User.Domain.SiteUser;
 import tripboat.tripboat1.User.Form.UserCreateForm;
+import tripboat.tripboat1.User.Repository.UserRepository;
 import tripboat.tripboat1.User.Services.UserServices;
+import tripboat.tripboat1.Util.DataNotFoundException;
+import tripboat.tripboat1.Util.LoginUser;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.security.Principal;
 
 @RequiredArgsConstructor
 @Controller
 @RequestMapping("")
 public class UserController {
     private final UserServices userServices;
+    private final UserRepository userRepository;
 
     @GetMapping("/signup")
     public String signup(UserCreateForm userCreateForm) {
@@ -52,6 +61,7 @@ public class UserController {
     public String login() {
         return "login_form";
     }
+
     @ResponseBody
     @RequestMapping("/Logout")
     public String Logout(HttpSession session) {
@@ -62,4 +72,5 @@ public class UserController {
         str += "</script>";
         return str;
     }
+
 }
