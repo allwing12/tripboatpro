@@ -46,7 +46,7 @@
                     <form th:action="@{/signup}" th:object="${userCreateForm}" method ="post">
                         <div class="d-flex justify-content-center"  style=" margin-top:70px;">
                             <label for="username"></label>
-                            <input type="text" id="username" th:field="*{username}" class="form_control" placeholder="아이디를 입력 하세요" style="width:327px; height: 58px; border-radius:5px; position:absolute; border:1px solid gray; padding:10px; background-color:#f5f6f7; font-family: 'Do Hyeon', sans-serif;">
+                            <input type="text" name="아이디" id="username" th:field="*{username}" class="form_control" placeholder="아이디를 입력 하세요" style="width:327px; height: 58px; border-radius:5px; position:absolute; border:1px solid gray; padding:10px; background-color:#f5f6f7; font-family: 'Do Hyeon', sans-serif;">
                             <div th:if="${#fields.hasErrors('username')}">
                                 <p th:errors="*{username}" style="color:red; margin-top:63px; position:absolute; font-size:14px; font-weight:300; margin-left:-150px; font-family: 'Do Hyeon', sans-serif;"></p>
                             </div>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="d-flex justify-content-center"  style="text-align: center; margin-top:100px;">
                             <label for="nickname"></label>
-                            <input type="text" id="nickname" th:field="*{nickname}" class="form-control" placeholder="닉네임을 입력 하세요" style="width:327px; height: 58px; border-radius:5px; margin-top: 70px; position:absolute; border:1px solid gray; padding:10px; background-color:#f5f6f7; font-family: 'Do Hyeon', sans-serif;">
+                            <input type="text" name="닉네임" id="nickname" th:field="*{nickname}" class="form-control" placeholder="닉네임을 입력 하세요" style="width:327px; height: 58px; border-radius:5px; margin-top: 70px; position:absolute; border:1px solid gray; padding:10px; background-color:#f5f6f7; font-family: 'Do Hyeon', sans-serif;">
                             <div th:if="${#fields.hasErrors('nickname')}" >
                                 <p th:errors="*{nickname}" style="color:red; margin-top:133px; position:absolute; font-size:14px; font-weight:300; margin-left:-150px; font-family: 'Do Hyeon', sans-serif;"></p>
                             </div>

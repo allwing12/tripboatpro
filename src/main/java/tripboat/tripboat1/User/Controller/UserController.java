@@ -6,6 +6,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import tripboat.tripboat1.User.Domain.SiteUser;
@@ -17,6 +18,7 @@ import tripboat.tripboat1.Util.LoginUser;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.lang.reflect.Member;
 import java.security.Principal;
 
 @RequiredArgsConstructor

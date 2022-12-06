@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 import tripboat.tripboat1.User.Domain.SiteUser;
 import tripboat.tripboat1.User.Form.UserCreateForm;
 import tripboat.tripboat1.User.Repository.UserRepository;
@@ -12,6 +13,7 @@ import tripboat.tripboat1.Util.DataNotFoundException;
 import tripboat.tripboat1.sample.TestServices;
 import tripboat.tripboat1.sample.testRepository;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.Optional;
 
@@ -32,7 +34,6 @@ public class UserServices {
         userRepository.save(user);
         return user;
     }
-
     public SiteUser getUser(String username) {
         Optional<SiteUser> siteUser = userRepository.findByusername(username);
         if (siteUser.isPresent()) {
