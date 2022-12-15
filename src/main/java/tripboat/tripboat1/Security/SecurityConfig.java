@@ -27,7 +27,6 @@ import java.security.Principal;
 public class SecurityConfig {
 
     private final UserSecurityServices userSecurityServices;
-
     @Bean
     public PasswordEncoder passwordEncoder () {
         return new BCryptPasswordEncoder();

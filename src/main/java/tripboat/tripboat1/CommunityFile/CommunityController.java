@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import tripboat.tripboat1.CommentFile.CommentForm;
 import tripboat.tripboat1.User.Services.UserServices;
 
+import java.security.Principal;
 
 
 @Controller
@@ -22,10 +23,11 @@ public class CommunityController {
     private final UserServices userServices;
 
     @RequestMapping("")
-    private String list(Model model, @RequestParam(value="page", defaultValue="0") int page, @RequestParam(value = "kw", defaultValue = "") String kw) {
+    private String list(Model model, @RequestParam(value="page", defaultValue="0") int page, @RequestParam(value = "kw", defaultValue = "") String kw, Principal principal) {
         Page<Community> paging = this.communityService.getList(page, kw);
         model.addAttribute("kw", kw);
         model.addAttribute("paging", paging);
+        model.addAttribute("name",userServices.getUser(principal.getName()));
         return "CommunityMain";
     }
     @RequestMapping("/detail/{id}")

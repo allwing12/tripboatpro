@@ -3,6 +3,8 @@ package tripboat.tripboat1.User.Controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,10 +18,14 @@ import tripboat.tripboat1.User.Services.UserServices;
 import tripboat.tripboat1.Util.DataNotFoundException;
 import tripboat.tripboat1.Util.LoginUser;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.lang.reflect.Member;
 import java.security.Principal;
+import java.security.Security;
+import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Controller
@@ -74,5 +80,4 @@ public class UserController {
         str += "</script>";
         return str;
     }
-
 }
